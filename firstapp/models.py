@@ -37,3 +37,8 @@ class Image(models.Model):
         image.objects.filter(id =self.pk).delete()
     def update_image(self,**kwargs):
         self.objects.filter(id = self.pk).update(**kwargs)
+        
+    @classmethod
+    def all_pics(cls):
+        pics = cls.objects.all()
+        return pics 
