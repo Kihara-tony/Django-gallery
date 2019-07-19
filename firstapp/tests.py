@@ -52,3 +52,27 @@ class CategoryTestClass(TestCase):
         self.health.update_category(name = 'Nature')
         categories = Category.objects.filter(name = 'People')
         self.assertEqual(len(categories), 1)
+        
+class LocationTestClass(TestCase):    
+    def setUp(self):
+        self.Kenya = Location(name = 'Kenya')
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Kenya, Location))
+    def test_save_method(self):
+        self.Kenya.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0)
+    def test_delete_method(self):
+        self.new_location = Location(name = 'Mombasa')
+        self.new_location.save_location()
+        self.new_location.delete_location()
+        locations = Location.objects.all()
+        self.assertEqual(len(locations), 0)
+    def test_update_method(self):
+        self.Nairobi = Location(name = 'Mombasa')
+        self.Nairobi.save_location()
+        self.Nairobi = Location(name = 'Nairobi')
+        self.Nairobi.save_location()
+        self.Nairobi.update_location(name = 'Nairobi')
+        locations = Location.objects.filter(name = 'Nairobi')
+        self.assertEqual(len(locations), 1)   
