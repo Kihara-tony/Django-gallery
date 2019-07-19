@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Image
 # Create your views here.
 def gallery(request):
     all_pic = Image.all_pics()
