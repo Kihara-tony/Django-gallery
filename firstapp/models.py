@@ -42,3 +42,8 @@ class Image(models.Model):
     def all_pics(cls):
         pics = cls.objects.all()
         return pics 
+    
+    @classmethod
+    def pic_locations(cls):
+        pics = cls.objects.order_by('location')
+        return pics 
