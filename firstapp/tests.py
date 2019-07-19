@@ -29,3 +29,26 @@ class ImageTestClass(TestCase):
         pics = Image.objects.all()      
         self.assertEqual(len(images), 1)
 
+class CategoryTestClass(TestCase):
+    def setUp(self):
+        self.nature = Category(name = 'nature')
+    def test_instance(self):
+        self.assertTrue(isinstance(self.nature, Category))
+    def test_save_method(self):
+        self.nature.save_category()
+        categories = Category.objects.all()
+        self.assertTrue(len(categories) > 0)
+    def test_delete_method(self):
+        self.new_category = Category(name = 'spring')
+        self.new_category.save_category()
+        self.new_category.delete_category()
+        categories = Category.objects.all()
+        self.assertEqual(len(categories), 0)   
+    def test_update_category(self):
+        self.health = Category(name = 'Food')
+        self.health.save_category()
+        self.health = Category(name = 'Fashion')
+        self.health.save_category()
+        self.health.update_category(name = 'Nature')
+        categories = Category.objects.filter(name = 'People')
+        self.assertEqual(len(categories), 1)
