@@ -47,3 +47,8 @@ class Image(models.Model):
     def pic_locations(cls):
         pics = cls.objects.order_by('location')
         return pics 
+    
+    @classmethod
+    def pic_categories(cls):
+        pics = cls.objects.order_by('category')
+        return pics 
