@@ -5,6 +5,7 @@ def gallery(request):
     all_pic = Image.all_pics()
     print(all_pics)
     return render(request,'gallery.html',{"all_pics":all_pics})
+
 def search_results(request):
     if 'image' in request.GET and request.GET['image']:
         search_input =request.GET.get('image')
@@ -14,3 +15,8 @@ def search_results(request):
     else:
         message = "Please input something in the search field"
         return render(request,"search.html",{"message":message})
+    
+def display_images_categories(request):
+    pics = Image.pic_categories()
+    return render(request,'categories.html',{"pics":pics})
+    
