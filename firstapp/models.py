@@ -51,4 +51,9 @@ class Image(models.Model):
     @classmethod
     def pic_categories(cls):
         pics = cls.objects.order_by('category')
-        return pics 
+        return pics
+    
+    @classmethod
+    def get_pic(cls, id):
+        pic = cls.objects.get(id=id)
+        return pic 
