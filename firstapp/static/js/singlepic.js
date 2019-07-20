@@ -13,7 +13,3 @@ $(document).ready(function () {
         alert('Link Copied!')
     })
 })
-
-$('.menu-icon').on('click', function () {
-    $('nav ul').toggleClass('hidden')
-})
