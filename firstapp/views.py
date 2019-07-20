@@ -3,8 +3,8 @@ from .models import Image
 # Create your views here.
 def gallery(request):
     all_pic = Image.all_pics()
-    print(all_pics)
-    return render(request,'gallery.html',{"all_pics":all_pics})
+    print(all_pic)
+    return render(request,'gallery.html',{"all_pic":all_pic})
 
 def search_results(request):
     if 'image' in request.GET and request.GET['image']:
