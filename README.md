@@ -20,8 +20,7 @@
  |Behaviour|INput|Output|
  |:------|:-----|:-------|
  |Search pictures|When someone enters the name of the category of which the picture is|Then the picture is displayed singly|
- |See picture in full screen|
- when the user clicks on the picture|Then the picture zooms and fills the screen|
+ |See picture in full screen|when the user clicks on the picture|Then the picture zooms and fills the screen|
  |Copy the picture's link|When the user clicks on the copy link button|Then the user is able to copy the link and paste for friends|
  
  ----------------------------
