@@ -1,3 +1,6 @@
+function copyLink(){
+    alert("The link was coppied on the clipboard")
+}
 $(document).ready(function(){
 
     $('.category-button').click(function(event) {
@@ -63,10 +66,10 @@ $(document).ready(function(){
   
   
   })
-  
   $(".close").click(function() {
     $('#myModal').css('display', "none");
     $('#modal-details').css('display', 'none')
   })
-  })
+  
+})
   

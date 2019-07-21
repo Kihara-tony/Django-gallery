@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
-    name = models.CharField(max_length=15)
+    name = models.CharField(max_length=150)
     def __str__(self):
         return self.name
     def save_category(self):
@@ -13,7 +13,7 @@ class Category(models.Model):
         self.objects.filter(id = self.pk).update(**kwargs)
         
 class Location(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=200)
     def __str__(self):
         return self.name
     def save_location(self):
@@ -25,7 +25,7 @@ class Location(models.Model):
         
 class Image(models.Model):
     image = models.ImageField(upload_to = 'pics/',null =True)
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=120)
     description = models.CharField(max_length=500)
     category = models.ForeignKey('Category',on_delete =models.CASCADE,null='True',blank=True)
     location =models.ForeignKey('Location',on_delete= models.CASCADE,null='True',blank=True)
