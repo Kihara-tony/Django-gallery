@@ -18,6 +18,7 @@
 ## BDD
  
  |Behaviour|INput|Output|
+ |:------|:-----|:-------|
  |Search pictures|When someone enters the name of the category of which the picture is|Then the picture is displayed singly|
  |See picture in full screen|
  when the user clicks on the picture|Then the picture zooms and fills the screen|
@@ -69,5 +70,5 @@
 
 ## LICENSE 
 
- [MIT Lisence]("https://github.com/Kihara-tony/LICENS/blob/master/LICENSE") this application is free and open to anyone in need of modifying and making corrections.
+ [MIT Lisence](https://github.com/Kihara-tony/LICENS/blob/master/LICENSE) this application is free and open to anyone in need of modifying and making corrections.
  
