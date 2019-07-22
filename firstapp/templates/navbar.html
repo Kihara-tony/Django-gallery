@@ -12,8 +12,8 @@
           aria-haspopup="true" aria-expanded="false">Locations
         </a>
         <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
-          {% for location in locations %}
-          <a style="font-size: 17px" class="dropdown-item" href="/location/{{location.id}}">{{location.photo_location}}</a>
+          {% for location in display_images_locations %}
+          <a style="font-size: 17px" class="dropdown-item" href="/location/{{location.name}}">{{location.name}}</a>
           {% endfor %}
         </div>
       </li>

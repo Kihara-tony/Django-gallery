@@ -59,7 +59,7 @@ a{
     width: 80%;
     max-width: 700px;
     background-image: url("http://all4desktop.com/data_images/wallpapers/3d-and-abstract/372211.jpg");
-    color:yellow;
+    color:black;
 }
 
 #caption {
@@ -122,7 +122,7 @@ a{
   .container .btn {
     position: absolute;
     bottom: 50%;
-    left: 50%;
+    left: 110%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: rgb(71, 4, 51);
@@ -189,7 +189,7 @@ nav ul li a{
 #btn-copy {
     position: absolute;
     bottom: 5.5%;
-    left: 2%;
+    left: 7%;
     border-radius: -9%;
     font-weight: bold;
     background: #8c0a85;
