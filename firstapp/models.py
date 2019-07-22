@@ -12,6 +12,7 @@ class Category(models.Model):
     def update_category(self,**kwargs):
         self.objects.filter(id = self.pk).update(**kwargs)
         
+        
 class Location(models.Model):
     name = models.CharField(max_length=200)
     def __str__(self):
@@ -22,6 +23,7 @@ class Location(models.Model):
         self.objects.filter(id = self.pk).delete(**kwargs)
     def update_location(self,**kwargs):
         self.objects.filter(id = self.pk).update(**kwargs)
+        
         
 class Image(models.Model):
     image = models.ImageField(upload_to = 'pics/',null =True)
@@ -37,6 +39,7 @@ class Image(models.Model):
         image.objects.filter(id =self.pk).delete()
     def update_image(self,**kwargs):
         self.objects.filter(id = self.pk).update(**kwargs)
+        
         
     @classmethod
     def all_pics(cls):

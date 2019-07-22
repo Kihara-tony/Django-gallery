@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
@@ -12,40 +11,82 @@
   <div class="row">
     {% if images %}
     {% for image in images %}
-    <div class="col-md-5">
-      <img style=" margin-top: 20px; margin-bottom: 20px; width:500px; height:500px;" src="{{image.image.url}}" class="img-fluid" alt="Image" data-toggle="modal" data-target="#{{image.id}}">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 columns">
+            <div class="scale">
+                <div class="opacity">
+                    <div class="view">
+                        <a href="" class="btn-view">{{image.name}}</a>
+                    </div>
+                </div>
+            <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid myimage" >
+                 <button id='btn-copy' onclick="copyLink()"   data-info="{{request.get_host }}{{image.image.url}}" type="button" class="btn btn-info btn-xs">
+                <span class="glyphicon glyphicon-copy"></span>
+                copy link
+                </button>
+                
+                <div id="myModal" class="modal">
+    
+                    <!-- The Close Button -->
+                    <span class="close">&times;</span>
+                  
+                    <!-- Modal Content (The Image) -->
+                    <img src='' class="modal-content" id="modal-con">
+                   
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                  </div>
+                
+    
+                    <div class="container">
+                        
+                           
+                        <button
+    
+                        id='details'
 
-      <!-- Image Details modal -->
+                        data-description='{{image.description}}'
 
-      <div class="modal fade bd-example-modal-lg" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="imageTitle" aria-hidden="true">
-        <div style="max-width:70%; max-height:50%; padding-top:100px;" class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="imageTitle">{{image.image_name}}</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <img style="max-width:100%; max-height:100%" src="{{image.image.url}}" class="img-fluid" alt="Image">
-              <br>
-              {{image.image_description}}
-            </div>
-            <div class="modal-footer">
-              <input class="form-control input-lg" type="text" value="https://gallery-django.herokuapp.com{{image.image.url}}" id="{{image.id}}-url">
-              <button class="btn btn-outline-info" onclick="copyUrl('{{image.id}}-url')">Copy Image Url</button>
-            </div>
-          </div>
+                        data-location='{{image.location}}'
+            
+                        data-category='{{image.category}}'
+            
+                        
+            
+                        type="button"
+            
+                        class="btn btn-info btn-xs info-btn"
+            
+                        data-toggle="modal">
+                                     View Details
+            
+                      </button>
+    
+                      <div id="modal-details" class="modal">
+    
+                        <span class="close">&times;</span>
+              
+                        <div class="modal-content">
+              
+                        <!-- <blockquote id="caption-d"> -->
+              
+                          <ul>
+              
+                            <label>DESCRIPTION:</label>
+              
+                            <li class="oneone"></li>
+              
+                            <label>LOCATION:</label>
+              
+                            <li class="twotwo"></li>
+                            <label>CATEGORY:</label>
+                            <li class="threethree"></li>
+                          </ul>
+                        <!-- </blockquote> -->
+                        </div>
+                      </div>
+                  </div> 
+              </div>
         </div>
-      </div>
-    </div>
-    <script type="text/javascript">
-      function copyUrl(element) {
-        var myVar = document.getElementById(element)
-        myVar.select();
-        document.execCommand('copy')
-      }
-    </script>
     {% endfor %}
     {% endif %}
   </div>
