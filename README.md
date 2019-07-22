@@ -18,25 +18,26 @@
 ## BDD
  
  |Behaviour|INput|Output|
+ |:------|:-----|:-------|
  |Search pictures|When someone enters the name of the category of which the picture is|Then the picture is displayed singly|
- |See picture in full screen|
- when the user clicks on the picture|Then the picture zooms and fills the screen|
+ |See picture in full screen|when the user clicks on the picture|Then the picture zooms and fills the screen|
  |Copy the picture's link|When the user clicks on the copy link button|Then the user is able to copy the link and paste for friends|
+ 
  ----------------------------
 
 ## SETUP
 
  - Requirements needed are :
-          - Internet Connection
-          - Terminal
-          - Text Editor
-          - Python installed
+ - Internet Connection
+ - Terminal
+ - Text Editor
+ - Python installed
  - Installation and setup :
-          - First copy the link of the app in github in the clonning button.
-          - Then open your terminal and write ; git clone <here comes the link you had copied>
-          - After the clonning process is done in the terminal enter ; cd Django-gallery
-          - Create an environments where you will download the python dependacies
-          - After downloading the python dependencies you are good to go on with modifying the app
+ - First copy the link of the app in github in the clonning button.
+ - Then open your terminal and write ; git clone <here comes the link you had copied>
+ - After the clonning process is done in the terminal enter ; cd Django-gallery
+ - Create an environments where you will download the python dependacies
+ - After downloading the python dependencies you are good to go on with modifying the app
 
 ------------------------------------
 
@@ -68,5 +69,5 @@
 
 ## LICENSE 
 
- [MIT Lisence]("https://github.com/Kihara-tony/LICENS/blob/master/LICENSE") this application is free and open to anyone in need of modifying and making corrections.
+ [MIT Lisence](https://github.com/Kihara-tony/LICENS/blob/master/LICENSE) this application is free and open to anyone in need of modifying and making corrections.
  
